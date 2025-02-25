@@ -1,0 +1,103 @@
+27/11/24
+--------------
+
+CSS:
+--------
+It is used to design web app and to make it responsive.
+it stands for cascading style sheet.
+latest version of css is 3.
+
+
+Q.what are the types of css:
+-----------------------------------
+1.Inline CSS: inside a opening tag we use style attribute and in that we use property and value.
+2.Internal CSS: in html file we use style tag and in that we select element apply css property.
+syntax:
+selector{
+    property:value;
+}
+3.External CSS:
+In this we create an external css file and link it to html file inside head tag using link tag.
+
+
+Types of selector:
+---------------------------------
+1.element or tag name selector(selector): we use element or tag name to apply css property.
+
+2.group selector(selector1,selector2,selector3): we select multiple elements to apply style in group.
+
+3.id selector(#): we apply css to specific element with the help of id.
+id must be unique.
+
+4.Class selector(.): we apply css to specific element with the help of class.
+class can be duplicate.
+
+5.Universal selector(*): we use this to select all the elements in html file
+
+
+
+Box Model:
+-----------------
+1.Content: It contain any text or image.
+2.Padding: it is used to create space between content and element border.
+3.Border: It is a line drawn around an element.
+4.Margin: it is used to define space between outside element and screen width.
+
+
+visibility:hidden;
+----------------------
+it will hide the selected element but space for that element will be there.
+
+display:none;
+--------------------
+it will hide the elemnt and space will be replaced by other element.
+
+Position:
+-------------------
+it is used to move an element from one place to another by applying values like(top,right,bottom,left)
+By Default, eleemnt position is static.
+
+1.position:stattic;(Default)
+2.position:relative; element will move from left,right,top and bottom side.
+3.position:absolute; when we want to move child element according to its parent element.
+4.position:fixed; when we have to fix an element in screen.
+5.position:sticky; when we have to stick the element on screen window.
+
+Media Query:
+-----------------------
+It is used to apply different style rule to an element acc to diff screen width.
+
+syntax: @media screen and (screen-width){
+    css code
+}
+
+device screen-width >= 1200px xl screen
+device screen-width >= 992px lg screen
+device screen-width >= 768px md screen
+device screen-width >= 576px sm screen
+device screen-width <576px xsm screen
+
+secreen width has 2 properties:
+------------------------------------
+
+1.max-width: property will be applicable from min to max max width, not above then the mx width.
+2.min-width: property will be applicable from its min width to scrren's width.
+
+28/11/24
+-----------------------
+
+
+BOX-SIZING:
+-------------------
+it include element border size and eleemnt Padding size in its actual width.
+
+syntax: box-sizing: border-box;
+
+float:
+-----------------
+it is used to move block eleemnt(div,p) side by side
+
+syntax: float:value(left,right,none);
+
+overflow:
+-----------------

@@ -1,0 +1,46 @@
+28/11/24
+--------------
+
+BootStrap:
+--------------
+it is html,css,js framework.
+it makes web app more attractive,responsive and mobile friendly.
+it provide inbuilt classes.
+latest version of BootStrap is BootStrap5.
+
+
+There are two ways to use BootStrap:
+------------------------------------------------
+By using CDN(Content Delivery Network) link: we need internet in our system.
+By downloading
+
+official web:
+------------------
+getbootstrap.com
+
+container class
+color class
+bg-color class
+button class
+spinner border class
+spinner-grow class
+image classes
+table classes
+how to use carousel
+how to use nav
+how to use accordian
+
+Grid: it is used to manage layout of webapp by using inbuilt classes
+
+In BootStrap Grid provide mainly two classes:
+1.row class
+2.col class
+
+In BootStrap Grid row we can create columns with size 12, if column size is exceeded more than 12 size than column will start in second row.
+
+screen width>=1200px  .xl
+screen width>=992px  .lg
+screen width>=768px  .md
+screen width>=576px  .sm
+screen width<576px  .xsm
+

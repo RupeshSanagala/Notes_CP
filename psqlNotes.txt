@@ -1,0 +1,128 @@
+select c.first_name || ' ' || c.last_name as "customer_name", 
+s.first_name || ' ' || s.last_name as "Staff_name",
+p.amount,p.payment_date from customer c inner join payment p 
+on c.customer_id = p.customer_id inner join staff s using(staff_id) 
+order by payment_date 
+limit 10;
+
+select f.film_id,f.title,
+i.inventory_id from film f left join inventory i 
+on f.film_id = i.film_id
+where i.inventory_id is null
+order by title
+limit 10;
+
+select f.film_id,f.title,
+i.inventory_id from film f right join inventory i 
+on f.film_id = i.film_id
+where f.film_id is null
+order by title
+limit 10;
+
+select f1.title, f2.title , f1.length 
+from film f1 inner join film f2
+on f1.length = f2.length;
+
+select f1.title, f2.title , f1.length 
+from film f1 left join film f2
+on f1.length = f2.length;
+
+select customer_id,count(customer_id) as total_orders,
+sum(amount) as total_payments 
+from payment where payment_date> '2007-02-16' 
+group by customer_id 
+having sum(amount)>100 
+order by total_payments;
+
+select c.first_name || ' ' || c.last_name as "customer_name",
+c.customer_id,count(c.customer_id) as total_orders,
+sum(amount) as total_payments 
+from payment p inner join customer c on c.customer_id = p.customer_id
+where p.payment_date> '2007-02-16' 
+group by c.customer_id 
+having sum(amount)>100 
+order by total_payments
+limit 10
+offset 5;
+
+
+
+select c.first_name || ' ' || c.last_name as "customer_name",
+s.first_name || ' ' || s.last_name as "Staff_name",
+sum(p.amount) as total_amount 
+from customer c inner join payment p 
+on c.customer_id = p.customer_id inner join staff s using(staff_id) 
+group by c.customer_id
+limit 10;
+
+
+select staff_id,customer_id,count(customer_id) ,sum(amount) from payment 
+group by staff_id,customer_id 
+order by staff_id;
+
+select staff_id,customer_id,sum(amount) 
+from payment 
+group by grouping sets((customer_id,staff_id),(staff_id),(customer_id),());
+
+select grouping(customer_id),grouping(staff_id),customer_id,staff_id,
+sum(amount) from payment group by grouping sets((customer_id),(staff_id),())
+order by customer_id,staff_id;
+
+
+select customer_id,staff_id,
+sum(amount) from payment
+group by customer_id,
+cube(staff_id)
+order by customer_id,staff_id;
+
+
+with action_films as (
+select f.title,f.length
+from film f inner join film_category fc using(film_id)
+inner join category c using (category_id) 
+where c.name='Action')
+select * from action_films;
+
+
+-- CTE 1 calculate film statistics
+
+select
+      avg(rental_rate) as avg_rental_rate,
+	  max(length) as max_length,
+	  min(length) as min_length
+from film),
+customer_stats as (
+-- CTE 2 calculate customer statistics
+select
+     count(distinct customer_id) as total_customers,
+	 sum(amount) as total_payments
+	 from payment
+)
+--Main Query using the CTEs
+
+select round((select avg_rental_rate from film_stats),2)
+as avg_film_rental_rate,
+(select max_length from film_stats) as max_film_length,
+(select min_length from film_stats) as min_film_length,
+(select total_customers from customer_stats) as total_customers,
+(select total_payments from customer_stats) as total_payments;
+
+
+
+select title,length, 
+case 
+   when length>0 and length<=50 then 'Short' 
+   when length >50 and length<=120 then 'Medium'
+   when length>120 then 'Long'
+end duration
+from film
+order by title;
+
+select
+sum(
+     case when rental_rate = 0.99 then 1 else 0 end) as "Economy",
+sum(
+    case when rental_rate = 2.99 then 1 else 0 end) as "Mass",
+sum(
+    case when rental_rate = 4.99 then 1 else 0 end) as "Premium"
+from film;

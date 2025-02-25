@@ -1,0 +1,132 @@
+: Introduction and SetUp.
+-------------------------------
+Mocha – Mocha is a feature-rich JavaScript test framework running on Node.js
+Pre-requisite – Node, VSCode, ES6 Mocha and Chai Snippets for Visual Studio Code
+ 
+Steps:
+Open the terminal, create a project directory, move into it and run npm init –y
+Run npm i mocha chai
+Create a test folder
+Change script test key to have value mocha
+Create a src folder and create an app.js file
+Create test.js file
+ 
+ 
+Open package.json file and type test : ‘mocha’ and save it. Every time you make changes save it compulsory
+ 
+Inside create src folder create a file app.js
+Inside test folder create a file app.spec.js
+ 
+Synchronous Test Cases describe it, context, specify, suite and test – BDD & TDD 
+ 
+Steps:
+Add functions and export the same
+Write tests into test file using ‘Describe’ and ‘It’ blocks – BDD or ‘Context’ and ‘Specify’
+Write tests into test file using ‘Suite’ and ‘Test’ blocks – TDD
+Run Tests using npm test
+ 
+Tdd is developer centre, bdd is user-centric
+ 
+ 
+Behavior Driven Development
+	
+Test Driven Development
+
+
+Behavior Driven Development is a development technique which focuses more on a software application’s behavior.
+	
+Test Driven Development is a development technique which focuses more on the implementation of a feature of a software application/product.
+
+
+In BDD the participants are Developers, Customer, QAs.
+	
+In TDD the participants are developers.
+
+
+Mainly it creates an executable specification that fails because the respective feature doesn’t exist, then writing the simplest code that can make the specification pass and as a result we get the required behavior implemented
+ in the system.
+	
+Mainly it refers to write a test case that fails because the specified functionality doesn’t exist and after that update the code that can make the test case pass and as a result we get the feature implemented in the system.
+
+
+Its main focus is on system requirements.
+	
+Its main focus is on unit test.
+
+
+In BDD the starting point is a scenario.
+	
+In TDD the starting point is a test case.
+
+
+It is a team methodology.
+	
+It is a development practice.
+
+
+Here language used to write behavior/scenarios is simple English language.
+	
+Here language is used is similar to the one used for feature development like programming language.
+
+
+In BDD collaboration is required between all the stakeholders.
+	
+In TDD collaboration is required only between the developers.
+
+
+It is a good approach for project development which are driven by user actions.
+	
+It is a good approach for projects which involve API and third-party tools.
+
+
+Some of the tools used are  Cucumber, Dave, JBehave, Spec Flow,  Concordian, BeanSpec etc.
+	
+Some of the tools used are  JBehave, JDave, Cucumber, Spec Flow, BeanSpec, FitNesse etc.
+
+Notes Resources:
+------------------------
+Monica (Unverified)
+3:01 PM
+https://www.lambdatest.com/ 
+:  Link https://mochajs.org/#synchronous-co... by Monica (Unverified)
+Monica (Unverified)
+3:02 PM
+: https://mochajs.org/#synchronous-code
+Notes :  Link https://www.browserstack.com/... by Monica (Unverified)
+Monica (Unverified)
+3:02 PM
+Notes : https://www.browserstack.com/guide/unit-testing-for-nodejs-using-mocha-and-chai
+guru99  by Monica (Unverified)
+Monica (Unverified)
+3:02 PM
+guru99 
+Steps: Check command line usage Run tests u... by Monica (Unverified)
+Monica (Unverified)
+3:04 PM
+Steps:
+Check command line usage
+Run tests using npm test with an example of –fgrep, grep
+--timeout 50000 –parallel –bail –f ‘async’
+ 
+-f, -g = testfilters
+Regression Testing we can use this.
+ 
+Step 1: Open terminal in vs code and type
+Mocha –h enter
+: Html – Report Generate Mochaesome Report ... by Monica (Unverified)
+Monica (Unverified)
+3:05 PM
+: Html – Report
+Generate Mochaesome Report
+Steps:
+From terminal install mochawesome report ‘npm I mochawesome’
+Run from command line “mocha test\async_test.js –reporter mochawesome –reporter-options reportDir=customReportDir,reportFilename = customReportFilename”
+Add to scripts
+“scripts”:{
+“test”: “mocha –spec.\\test\\*.js –reporter mochawesome –reporter- options reportDir=customReportDir,reportFilename=customReportFilename
+}
+Note: Mochawesome = Name of the repository.
+Notes and commands: https://www.npmjs.com/package/mochawesome
+has context menu
+ 
+ 

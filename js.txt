@@ -1,0 +1,218 @@
+28/11/24
+-----------------
+
+javascript:
+----------------------
+it is used to add functionality in web app.
+it is interpreted language.
+it is loosely typed language.
+
+why js is loosely typed language?
+-------------------------------------------
+when we create a var in js , we cant determine what type nof data it contains , until unless we declare it.
+in js we can store multiple otypes of data.
+
+how to use js?
+--------------------
+there are two ways:
+---------------------
+1.Internal js: In html file we use script tag to write js code.
+2.External js: In this we create a separate js file and link it to html file.
+
+How to get output in js:
+-------------------------------
+
+1.document.write:It will display output in html page.it will display output in same line.
+2.window.alert():it will display output on model popup window.
+3.console.log():it will display output on console inside the browser.
+4.document.getElementById():it will display the element with specific id in console.
+5.innerHTML(DOM): it will display output inside an element.
+
+=====================================================================================
+
+29/11/24
+------------------
+
+1.Variable: It is used to store data in it.
+we can create variable in js by using var,let,const.
+
+Features of var:
+=========================
+it create function scope variable.
+we can use var before its declaration.
+we can redeclare the variable.
+it supports hoisting.
+
+Hoisting:
+-------------
+It is a concept where we can use the variable before its declaration.
+
+2.let: 
+----------------
+it is block scope variable.
+we cant use before declaration
+we cant redeclare.
+It doesnot supports hoisting.
+
+3.const:
+--------------------
+it is block scope variable.
+we cant use variable before its  declaration.
+When we declare a variable at the same time we have to initialize it.
+It doesnot supports hoisting.
+
+Datatypes in js:
+-----------------------
+pre-defined Datatypes
+-------------------------
+number
+string
+boolean
+undefined
+null
+
+user-defined Datatypes:
+-----------------------------
+array
+object
+
+
+operators:
+==============
+1.exponentation(**): It will return power of any number.
+2.equals(==): it will checks for values only and returns true if they are same irrsespective of Datatype.
+3.Strictly equals(===): it will checks for values and Datatype and returns true if they are same.
+
+
+DOM manipulation:
+------------------------
+
+Function:
+------------
+It is a block of code which is used to perform some specific task.
+it will execute only when we call it.
+they are reusable.
+
+Types of function:
+====================
+pre-defined function:
+user-defined function:
+
+syntax:
+-------------
+
+function functionName(arguments){
+    code
+}
+
+functionName();
+
+how to access data from input control
+how to call function by using event.
+
+Array:
+=====================
+It is used to store multiple values of same data type.
+In array data is stored on index basis.
+Array index starts from zero.
+
+object:
+=================
+
+
+Callback Function:
+----------------------
+Passing a function name as an arguments inside another function is called callback function.
+
+Date And Time:
+----------------------
+If we want to display data and time in js first we have object of Date class
+date object return data from browser.
+
+syntax: let objName = new Date();
+
+=========================================================================
+
+2/12/24
+==========================================================================
+
+String and its methods:
+----------------------------
+It is a collection of characters.
+In string every character has index and it starts from zero.
+In string blank space is also considered as string.
+
+There are 3 methods which will return index of substring within a string.
+-------------------------------------------------------------------------
+1.indexof(substring): 
+-------------------------
+It will search string from left to right and returns index of first occurance in the string.
+If searching string is not found, it gives result as "-1".
+
+2.lastIndexOf(searchingString,startIndex):
+-----------------------
+It will search string from right to left and returns index of first occurance in the string.
+If searching string is not found, it gives result as "-1".
+
+3.search(searchingString):
+-------------
+It will search string from left to right and returns index of first occurance in the string.
+If searching string is not found, it gives result as "-1".
+It is faster than indexof method.
+
+
+
+
+There are 3 methods which will return part of searching substring within a string.
+-----------------------------------------------------------------------------------------
+
+1.slice(startIndex,endIndex):
+------------------------------------
+It will return part of string from big string.
+If we write +ve index. it will search index from left to right.
+If we write -ve index. it will search index from right to left.
+
+2.substring(startIndex,endIndex):
+------------------------------------
+It will return part of string from big string.
+If we write +ve index. it will search index from left to right.
+
+3.substr(startIndex,totalNumberOfCharacter):
+------------------------------------
+It will return part of string from big string.
+If we write +ve index. it will search index from left to right.
+
+4.charAt(index): It will return character index number within the string.
+
+5.charCodeAt(index) It will character's ASCII value as output
+
+6.replace():
+
+7.replaceAll():
+
+prompt():
+------------
+It is used to take input from the user.
+
+setTimeOut(functionName,timeInterval):
+---------------------------------------
+It is used to call one function ater some time.It will call only once.
+
+setInterval(functionName,timeInterval):
+------------------------------------------
+It is used to call one function ater some time.It will call repeatedly until we clearinterval.
+
+ES5:
+====================
+
+map,reduce,filter,some,every,forEach
+
+ES-6(2015):
+----------------
+
+let,const,"**"
+
+
+
+
+
